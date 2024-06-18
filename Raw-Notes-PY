@@ -1,0 +1,699 @@
+PY 
+
+The PCEP™ certification shows that the individual is familiar
+ with the following concepts: fundamental terms and definitions
+compilation vs. interpretation
+Python's logic and structure
+keywords, instructions, indentation
+literals, variables, and numeral systems, 
+operators and data types, 
+I/O operations, 
+control flow mechanisms (conditional blocks and loops), 
+data collections (lists, tuples, dictionaries, strings), 
+functions (decomposition, built-in and user-defined functions, 
+organizing interaction between functions and their environment, 
+generators, recursion), exceptions (exception handling, hierarchies), 
+as well as the essentials of Python programming language syntax, 
+semantics, and the runtime environment
+
+
+
+"""
+is not a comment
+"""
+
+Control l # clear 
+
+"pass" + "word" 
+
+"ha" * 4 
+
+state, method 
+
+"hat".find('t')
+"hat".find('hat')
+"hat".find('foo') # -1 
+
+"zHAt123".lower().find('h')
+
+pip3.7 install --upgrade pip 
+
+pyenv shell 3.7.6  
+
+3.1 -- 
+3.5 
+
+Defines and basic lex of py ...
+https://docs.python.org/3/reference/lexical_analysis.html
+
+The Unicode category codes mentioned above stand for:
+
+False      await      else       import     pass
+None       break      except     in         raise
+True       class      finally    is         return
+and        continue   for        lambda     try
+as         def        from       nonlocal   while
+assert     del        global     not        with
+async      elif       if         or         yield
+
+Offical functions page 
+https://docs.python.org/3/library/functions.htm
+
+
+5.2 , 5.3 ,  
+Numbers 
+	decimal , 
+
+6.1 Unary and Bitwise Operators
+~
+a = 0b010
+a
+bin(a)
+(bin(~a))
+ALLWAYS .... 
+-1 * a - 1 
+| & ^ >> << 
+and or xor 
+6.2 
+Boolean Operators
+not or and 
+not True 
+True and True 
+False and True 
+
+6.3 Comparison Operators
+1 > 2 , 2 < 1 , 1 <=  1 , float auto 
+'b' > 'a', 'bb' >= 'ba'  
+ord('a') 
+every thing has a type , eg its an object , 
+1 == 1 , 1.0 == 1 
+[] is []
+False 
+6.4 Operator Priority (Binding)
+REVIEW 
+
+7.1 
+Typecastring 
+>>> 'This' and 'that'
+'that'
+>>>
+
+7.2 input function 
+input () 
+
+7.3 print function 
+
+8.3 string indexing and sliceing 
+
+my_str[len(my_str) -1 ]
+
+my_str[ 0:3 ]
+
+returns 3 and 4 not 5 
+my_str[ 3:5 ]
+
+my_str[3:len(my_str) ]
+my_str[7:]
+
+my_str[1:5:2]
+
+my_str[:2:2]
+
+my_str[::-1]
+
+9.1 Lists 
+>>> my_list += [8,9,10]
+>>> my_list
+['a', 2, 3, 4, 5, 8, 9, 10]
+>>> my_list += [8,9,10,11]
+>>> my_list
+['a', 2, 3, 4, 5, 8, 9, 10, 8, 9, 10, 11]
+>>> my_list[1:3] = [ 'b', 'c' ]
+>>> my_list
+['a', 'b', 'c', 4, 5, 8, 9, 10, 8, 9, 10, 11]
+>>> my_list[3:5] = ['d','e','f']
+>>> my_list
+['a', 'b', 'c', 'd', 'e', 'f', 8, 9, 10, 8, 9, 10, 11]
+>>>
+>>> my_list[4:]  = []
+>>> my_list
+['a', 'b', 'c', 'd']
+>>> del my_list[0]
+>>> my_list
+['b', 'c', 'd']
+
+9.2 List and Functions and Methods 
+>>> print "9.2"
+  File "<stdin>", line 1
+    print "9.2"
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("9.2")?
+>>> print ("9.2" )
+9.2
+>>>
+>>>
+>>> my_list.insert(0,a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> my_list.insert(0,'a')
+>>> my_list
+['a', 1, 2, 3, 4]
+>>> my_list.insert(0:2,'a')
+  File "<stdin>", line 1
+    my_list.insert(0:2,'a')
+                    ^
+SyntaxError: invalid syntax
+>>> my_list.index(3)
+3
+>>> my_list.index(1)
+1
+>>> my_list.index(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 0 is not in list
+>>> my_list.index(2)
+2
+>>> my_list
+['a', 1, 2, 3, 4]
+>>> my_list.index(1)
+1
+>>> my_list.index(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 0 is not in list
+>>> my_list.index(5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 5 is not in list
+>>> my_list.index(4)
+4
+>>> my_list
+['a', 1, 2, 3, 4]
+>>> my_list.insert(4,'ab')
+>>> my_list.index(4)
+5
+>>> a in my_list
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> 'a' in my_list
+True
+>>> 'ab' in my_list
+True
+>>> my_list
+['a', 1, 2, 3, 'ab', 4]
+>>> sorted.my_list
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'builtin_function_or_method' object has no attribute 'my_list'
+>>> sorted(my_list)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'int' and 'str'
+>>> my_list = [1,2,5,6,7]
+>>> sorted(my_list)
+[1, 2, 5, 6, 7]
+>>> reversed(my_list)
+<list_reverseiterator object at 0xb7595748>
+>>> list(reversed(my_list))
+[7, 6, 5, 2, 1]
+>>> rev_my=list(reversed(my_list))
+>>> rev_my
+[7, 6, 5, 2, 1]
+>>> lisdt(rev_my=list(reversed(my_list)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'lisdt' is not defined
+>>> list(rev_my=list(reversed(my_list)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list() takes no keyword arguments
+>>> rev_my=list(reversed(my_list))
+>>> rev_my=list(reversed(sorted(my_list)))
+>>> rev_my
+[7, 6, 5, 2, 1]
+>>>
+
+9.3 
+Nested Lists: Matrices and Cubes
+>>> my_matrix
+[[1, 2, 3], [4, 5, 6]]
+>>> row_count = len(my_matrix)
+>>> row_count
+2
+>>> column_count = len(my_matrix[0])
+>>> column_count
+3
+>>> my_matrix[0]
+[1, 2, 3]
+>>> my_matrix[0][2]
+3
+>>> my_matrix[0][0]
+1
+>>>
+
+Chap 10 Tuples 
+(,) 
+does not change SIZE , safe from mod , 
+Lists can be any length  TUPLES ARE FIXED SIZE 
+type(person)
+>>> my_list = [1,2,3]
+>>> my_tuple = (my_list,1)
+
+
+>>> my_list.append(6)
+>>> my_tuple
+([1, 2, 3, 1, 6], 1)
+>>>
+
+Chap 11 
+Dictionaries ( hash by any another name )
+{}
+>>> ages = { 'sam': 30, 'alax': 20 }
+>>> ages
+{'sam': 30, 'alax': 20}
+
+>>> ages['sam']
+30
+ ages['bill'] = 20
+
+>>> type(ages)
+<class 'dict'>
+>>> type(ages['bill'])
+<class 'int'>
+>>>
+
+>>> del (ages['bill'])
+>>> ages
+{'sam': 30, 'alax': 20}
+>>> 'sam' in ages
+True
+>>>
+
+weights = dict(kevin=160,bob=240)
+
+Tuples form 
+colors = dict([('kevin','blue'),('bob','green')])
+
+>>> colors
+{'kevin': 'blue', 'bob': 'green'}
+
+11.2 dict methods 
+
+Chapter 12.1
+String Encodings and Functions
+
+0x2122
+ord('\u2122')
+chr(8482)
+
+>>> my_str = 'tEstIng'
+>>> my_str.lower()
+
+"foo".lower() == "Foo".lower()
+>>> my_str.isascii()
+True
+
+>>> "1.0".isnumeric()
+False
+>>> "10".isnumeric()
+True
+
+
+>>> lines=['one line' , '2 line' , '3 line' ]
+>>> output = '\n'.join(lines)
+>>> output
+'one line\n2 line\n3 line'
+>>> print (output)
+one line
+2 line
+3 line
+
+>>> template = "hey i am sam {} , I am the py dude"
+>>> template.format('dude')
+'hey i am sam dude , I am the py dude'
+
+Chapter 13.1
+
+The `if` and `else` Statements
+
+>>> fun="party"
+>>> if fun == "party":
+...    print("fun")
+... else:
+...     pass
+...
+fun
+
+14.1 
+while loop 
+
+14.2
+
+For loop 
+>>> for key,value in ages.items():
+...     print(key, value)
+...
+K 29
+b 12
+kay 32
+
+14.3 
+>>> while count <= 24:
+...     if count % 4 ==0:
+...        print(count)
+...     count += 1
+...
+4
+8
+12
+16
+20
+24
+
+14.4 
+
+14.7 
+
+List Comprehensions
+
+>>> colors = ['red','blue', 'orange', 'green', 'yellow']
+>>> uppercase_colors = [color.upper() for color in colors]
+>>> uppercase_colors
+['RED', 'BLUE', 'ORANGE', 'GREEN', 'YELLOW']
+>>> warm_colors = [ color for color in colors if color in ['red', 'orange', 'yellow']
+...
+...
+KeyboardInterrupt
+>>> warm_colors = [ color for color in colors if color in ['red', 'orange', 'yellow'] ]
+>>> warm_colors
+['red', 'orange', 'yellow']
+
+
+15 Functions 
+
+>>> def add_two(num):
+...    return num + 2
+...
+>>> add_two(2)
+4
+>>> foo = add_two(2)
+>>> foo
+4
+>>>
+
+>>> def can_drive(age,drive_age=16):
+...     return age >= drive_age
+...
+>>> can_drive(12)
+False
+>>> can_drive(24)
+True
+
+>>> can_drive(12)
+False
+>>> can_drive(24)
+True
+>>> can_drive(age=24)
+True
+
+>>> def can_drive(age,drive_age=16):
+...     return age >= drive_age
+
+16.1 
+
+generator 
+
+yield 
+next 
+
+17 
+scopes 
+
+18
+exam 45 long 30 questions, some fill in blank , m choose 
+bad code , how wil it run , how it eval 
+behind the wheel , no prector 
+
+1 st 
+
+
+Maths 
+/ vs // 
++ returns a float , 3.0 + 1 , 
+
+and returns first truth or the last false vaule 
+True or False retruns true , if false last false value
+not "" 
+
+uppercase_colors [color.upper() for color in colors]
+
+for color in colors: 
+if color in ['red' , 'blue']:
+		warm_colors.append(color)
+
+
+
+warm_colors = [color for color i colors if color in ['red', 'orange', 'yellow']
+
+Basic Concepts
+Data Types
+Flow Control
+Data Collections
+Functions
+
+()  == tuple , immutable 
+[] == list , mutable 
+{} == dict  , keys mutable values mutable 
+
+{"key": 1 , "key2": 2 }
+BUT a = { 1,2,3} is a "set" 
+a = {} makes a dict 
+a = set() is a "set" 
+
+RESTART RESTART RESTART RESTART 
+
+Python operators
++ - * ** / // % 
+<< >> & | ^ ~ 
+< > <= >= == ~= <>
+<> and != are the same , != prefered 
+
+Logical operators
+and or is not in
+
+Operators 
+the dot , [] () 
+
+
+Operator Description, p 18 
+========================
+lambda Lambda expression
+or Boolean OR
+and Boolean AND
+not x Boolean NOT
+in, not in Membership tests
+is, is not Identity tests
+<, <=, >, >=, <>, !=, == Comparisons
+| Bitwise OR
+^ Bitwise XOR
+& Bitwise AND
+<<, >> Shifts
++, ­ Addition and subtraction
+*, /, % Multiplication, division,
+remainder
++x, ­x Positive, negative
+~x Bitwise not
+** Exponentiation
+x.attribute Attribute reference
+x[index] Subscription
+x[index:index] Slicing
+f(arguments...) Function call
+(expressions...) Binding or tuple display
+[expressions...] List display
+{key:datum...} Dictionary display
+`expressions...` String conversion
+
+? is 
+id() 
+type(a)
+
+List constructors [] , list() , range() 
+
+Tuples , is immutable 
+?? 
+Tuples constructors () but really comma , tuple()
+
+
+
+
+Unary and bitwise , 
+a = 0b010
+a
+2 
+bin(a)
+'0b10' 
+~a 
+-3 
+bin(~a)
+'-0b11'
+-1 * a -1
+-3 
+
+AND OR XOR , & | ^ 
+1 is True 
+a = 0b1001
+b = 0b1100
+bin( a | b )
+'0b1101'
+bin( a & b ) 
+'0b1000' 
+bin( a ^ b )
+'0b101' 
+SHIFT 
+a = 0b110
+bin ( a >> 2)
+'0b1' 
+a = 0b110 
+bin( a << 2) 
+'0b11000' 
+bin( a << 12 )
+'0b110000000000000'
+
+and or key words are not bit wise boolean 
+bin( a and b)
+bin( a or b )
+
+
+boolean 	
+not true 
+not Falase
+
+True or True 
+True or False 
+False or False
+
+True and True
+False and False 
+False and False
+
+Comparison 
+1 < 2
+2 > 1
+1 <= 1 
+'a' > 'b'
+'bb' >= 'ba' 
+ord('a') # ord does not like lists, char 
+'a' < 1 # Nope str vs int 
+1 == 1
+1 == 2 
+1.0 == 1 
+'a' == 2 # False , not and error
+1 != 2 
+1 is 1  # True 
+1 is 1.0 # False 
+'a' is not 'a' 
+id('a')
+id('a') == id('a')
+[] is [] 
+False # LIST are mutable 
+id([]) # a number , BUT Py knows its mutable , thus false
+
+Operator Binding
+() []  {} 
+Parenthesis and List/Dictionary/Set literals
+Accessing attributes (subscription, slicing, function/method call, attribute reference)
+Exponentiation (**)
+Positive, Negative, and bitwise complement
+Multiplication *, Division /, Floor Division //, Modulo %
+Addition +, Subtraction -
+Bitwise Shifts << & >>
+Bitwise AND &
+Bitwise XOR ^
+Bitwise OR |
+Comparison operators (in, not in, is, is not, <, >, <=, >=, ==, !=)
+Boolean NOT not
+Boolean AND and
+Boolean OR or
+Conditions if
+
+TypeCasting 
+Move object from one type to another 
+float(1)
+int(1.3)
+str(1)
+str(False)
+int('1.2')
+	ValueError 
+float('1')
+	Its ok with that ...
+bool(1)
+	True 
+bool('foo')
+	True
+bool(0)
+	False 
+bool(0.0)
+	False
+bool('')
+	False
+'This' and 'That'
+	'That' 
+'This' and 0 and 'That' 
+	0 
+	return the first falsy value 
+	( or the last truthy value )
+1 or 0 
+	1 
+	return the first one true 
+	reture the last falsey value 
+0 or 1 
+	1 
+0 or ""
+	''
+0 or 1 or 'This'
+	1
+not True
+	false
+not ""
+	True 
+not 1 
+	False
+Returns the VALUE 
+
+Zero or False
+One or True 
+Booleans allways return one of the operands , or , and , 
+
+REF 
+https://docs.python.org/3/library/stdtypes.html#truth-value-testing
+	
+
+
+---
+Fun syntax things 
+bin (1)
+'0b1' 
+
+....
+Dry Run .... 
+output = [str(value) for value in ages.values()]
+names[1:2] # start and end 
+
+stop exec on first true 
+if
+if
+else
+
+if 
+if 
+else
+
+if
+elif
+else
+
+
+
+
